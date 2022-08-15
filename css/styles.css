@@ -625,11 +625,10 @@ img {
 }
 
 .subscribe {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .subscribe-form {
   display: flex;
-  margin-right: 215px;
 }
 
 .subscribe-text {
@@ -655,7 +654,6 @@ img {
 }
 
 .subscribe-button {
-  position: relative;
   padding: 10px 28px;
   width: 200px;
   height: 50px;
@@ -826,7 +824,7 @@ img {
   background-color: var(--background-color);
   border-radius: 4px;
   width: 528px;
-  min-height: 581px;
+  height: 581px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -929,7 +927,7 @@ img {
 }
 
 .modal-comment {
-  width: 448px;
+  width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -952,13 +950,18 @@ img {
 }
 
 .checkbox {
-  margin-left: 0;
-  margin-bottom: 30px;
+  /* display: block; */
+  /* padding: 0 12px; */
+  /* margin-bottom: 30px; */
 }
 
 .modal-checkbox {
-  display: flex;
   position: relative;
+  left: 28px;
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -968,11 +971,13 @@ img {
 }
 
 .icon-checkbox {
+  position: absolute;
+  left: -28px;
+  top: 3px;
   width: 16px;
   height: 15px;
   border: 2px solid var(--primary-text-color);
   border-radius: 3px;
-  margin-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -980,10 +985,22 @@ img {
 }
 
 .icon-check {
+  /* position: absolute; */
   fill: transparent;
 }
 
-.checkbox-input:checked + .icon-checkbox {
+.checkbox-link-span {
+  /* position: absolute; */
+  top: 0;
+  margin-left: 28px;
+  padding: 0;
+}
+
+.checkbox-link {
+  color: var(--hover-color);
+}
+
+.checkbox-input:checked + .modal-checkbox .icon-checkbox {
   background-color: var(--hover-color);
   border: none;
 }
@@ -995,11 +1012,6 @@ img {
 
 .checkbox-input:checked + .modal-checkbox .icon-check {
   fill: var(--background-color);
-}
-
-.checkbox-link {
-  display: flex;
-  color: var(--hover-color);
 }
 
 .checkbox-button {
