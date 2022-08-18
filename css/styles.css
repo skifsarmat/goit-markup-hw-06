@@ -508,7 +508,6 @@ img {
 }
 
 .footer-contacts {
-  margin-right: 70px;
 }
 
 .footer-logo {
@@ -583,6 +582,7 @@ img {
   color: var(--hover-color);
 }
 .join-us {
+  margin-left: 70px;
 }
 
 .join-us-title {
@@ -842,7 +842,7 @@ img {
   background-color: var(--background-color);
   border-radius: 4px;
   width: 528px;
-  height: 581px;
+  min-height: 581px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -866,10 +866,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.close-icon {
-  fill: currentColor;
 }
 
 .is-hidden {
@@ -942,12 +938,11 @@ img {
 }
 
 .modal-window {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .modal-comment {
   display: block;
-  margin-bottom: 20px;
   width: 100%;
   height: 120px;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -971,15 +966,17 @@ img {
 }
 
 .checkbox {
+  margin-bottom: 30px;
+  padding: 0 12px;
 }
 
 .modal-checkbox {
   position: relative;
-  left: 38px;
+  left: 30px;
   display: block;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin: 0;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -1020,7 +1017,7 @@ img {
 
 .checkbox-input:checked + .modal-checkbox .icon-checkbox {
   background-color: var(--hover-color);
-  border: none;
+  border-color: var(--hover-color);
 }
 
 .checkbox-input:focus + .icon-checkbox {
@@ -1031,16 +1028,21 @@ img {
   fill: var(--background-color);
 }
 
+.send-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .checkbox-button {
   margin-left: 124px;
-  margin-bottom: 0;
+  margin: 0;
   width: 200px;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  align-items: center;
-  text-align: center;
+  justify-content: center;
   letter-spacing: 0.06em;
   color: var(--button-text);
   background-color: var(--hover-color);
@@ -1054,7 +1056,16 @@ img {
 
 .checkbox-button:hover,
 .checkbox-button:focus {
-  color: var(--button-text);
+  color: var(--hover-button);
   background-color: var(--hover-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.close-icon {
+  fill: currentColor;
+}
+
+.close-icon:hover,
+.close-icon:focus {
+  fill: var(--button-bacground);
 }
